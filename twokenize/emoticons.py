@@ -59,10 +59,3 @@ def analyze_tweet(text):
   #  if a: return "OTHER"
   #  if t: return "TONGUE"
   #return "NA"
-
-if __name__=='__main__':
-  for line in sys.stdin:
-    import sane_re
-    sane_re._S(line[:-1]).show_match(Emoticon_RE, numbers=False)
-    #print(analyze_tweet(line.strip()), line.strip(), sep="\t")
-

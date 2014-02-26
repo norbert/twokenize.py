@@ -9,7 +9,7 @@ statistical learning with in-the-loop human evaluation :)
 
 __author__="brendan o'connor (anyall.org)"
 
-import re,sys
+import re
 import emoticons
 mycompile = lambda pat:  re.compile(pat,  re.UNICODE)
 def regex_or(*items):
@@ -200,12 +200,3 @@ def edge_punct_munge(s):
 
 def unprotected_tokenize(s):
   return s.split()
-
-if __name__=='__main__':
-  for line in sys.stdin:
-    print u" ".join(tokenize(line[:-1])).encode('utf-8')
-    #print "CUR\t" + " ".join(tokenize(line[:-1]))
-    #print "WS\t" + " ".join(line[:-1].split())
-    #print ansi.color(line.strip(),'red')
-    #print ansi.color(" ".join(tokenize(line.strip())),'blue','bold')
-
